@@ -4,7 +4,6 @@ import { getCssText, globalStyles } from "../../stitches.config";
 
 export default class Document extends NextDocument {
   render() {
-    globalStyles();
     return (
       <Html lang="en">
         <Head>

@@ -1236,6 +1236,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/recursive@^4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/recursive/-/recursive-4.5.1.tgz#5d31acd7b2d1c24cd11c7c6d0a5debebd8d9a908"
+  integrity sha512-kbYT6rFRVWUyd08X235230Pm4rnR6HKAeMMYKoTjK9Zn4xTXZhV149cmdzS8hXpd3B/qWclO7eweeaSqbrxo9Q==
+
 "@gar/promisify@^1.0.1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.2.tgz#30aa825f11d438671d585bd44e7fd564535fc210"

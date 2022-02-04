@@ -6,9 +6,12 @@ import Button from "./Button";
 
 export default {
   title: "Components/Button",
-  component: Button,
   argTypes: {
-    children: { control: "text" },
+    children: {
+      control: "text",
+      name: "Button text",
+      defaultValue: "Mira button",
+    },
     size: {
       control: {
         type: "select",
@@ -31,7 +34,7 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (
   args: ComponentMeta<typeof Button>
-) => <Button {...args}>Mira button</Button>;
+) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

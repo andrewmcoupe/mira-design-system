@@ -60,6 +60,7 @@ export const { styled, getCssText } = createStitches({
   theme: {
     fonts: {
       system: "system-ui",
+      recursive: "Recursive",
     },
     colors: {
       hiContrast: "hsl(206,10%,5%)",
@@ -72,15 +73,33 @@ export const { styled, getCssText } = createStitches({
       ...pink,
     },
     fontSizes: {
-      1: "14px",
-      2: "16px",
-      3: "18px",
+      1: "1rem",
+      "1.5": "1.5rem",
+      2: "2rem",
+      "2.5": "2.5rem",
+      3: "3rem",
+      "3.5": "3.5rem",
+      4: "4rem",
+      "4.5": "4.5rem",
     },
     space: {
-      1: "0.5rem",
-      2: "1rem",
-      3: "1.5rem",
-      4: "2rem",
+      1: "8px",
+      2: "16px",
+      3: "24px",
+      4: "32px",
+      5: "40px",
+      6: "48px",
+      7: "56px",
+    },
+    fontWeights: {
+      1: "300",
+      2: "400",
+      3: "500",
+      4: "600",
+      5: "700",
+      6: "800",
+      7: "900",
+      bold: "bold",
     },
   },
 });
