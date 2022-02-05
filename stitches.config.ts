@@ -1,4 +1,5 @@
 import { createStitches, createTheme, globalCss } from "@stitches/react";
+
 import {
   yellow,
   gray,
@@ -48,6 +49,12 @@ export const globalStyles = globalCss({
 });
 
 export const { styled, getCssText, theme, css } = createStitches({
+  utils: {
+    px: (value: any) => ({
+      paddingLeft: value,
+      paddingRight: value,
+    }),
+  },
   media: {
     bp1: "(min-width: 520px)",
     bp2: "(min-width: 900px)",

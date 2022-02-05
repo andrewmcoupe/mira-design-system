@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Text from "./Text";
+import Heading from "./Heading";
 
-describe("Text", () => {
+describe("Heading", () => {
   it("should render the correct text", () => {
-    const { getByText } = render(<Text>Hello Mira</Text>);
+    const { getByText } = render(<Heading>Hello Mira</Heading>);
 
     expect(getByText("Hello Mira")).toBeInTheDocument();
   });

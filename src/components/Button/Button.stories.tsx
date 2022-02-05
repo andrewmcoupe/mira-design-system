@@ -1,6 +1,5 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { ComponentProps } from "@stitches/react";
 
 import Button from "./Button";
 
@@ -25,8 +24,8 @@ export default {
       },
       description: "Whether the button should stretch to fill its container",
     },
-    color: {
-      control: { type: "select", options: ["primary", "secondary", "ghost"] },
+    variant: {
+      control: { type: "select", options: ["red", "green", "blue", "ghost"] },
       description: "The color of the button",
     },
   },
@@ -38,17 +37,22 @@ const Template: ComponentStory<typeof Button> = (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  color: "primary",
+  variant: "red",
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  color: "secondary",
+export const Green = Template.bind({});
+Green.args = {
+  variant: "green",
+};
+
+export const Blue = Template.bind({});
+Blue.args = {
+  variant: "blue",
 };
 
 export const Ghost = Template.bind({});
 Ghost.args = {
-  color: "ghost",
+  variant: "ghost",
 };
 
 export const Stretch = Template.bind({});
@@ -65,26 +69,3 @@ export const Pill = Template.bind({});
 Pill.args = {
   pill: true,
 };
-
-export const AllTogetherNow = () => (
-  <section
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-      gap: "16px",
-      alignItems: "start",
-    }}
-  >
-    <Button color="primary">Primary button</Button>
-    <Button color="secondary">Secondary button</Button>
-    <Button color="ghost">Ghost button</Button>
-    <Button stretch>Stretch button</Button>
-    <Button size="large">Large primary button</Button>
-    <Button color={"secondary"} size="large">
-      Large secondary button
-    </Button>
-    <Button color={"ghost"} size="large">
-      Large ghost button
-    </Button>
-  </section>
-);
