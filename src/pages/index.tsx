@@ -36,7 +36,7 @@ const Home: NextPage = () => {
               alignItems: "start",
             }}
           >
-            <Button color="primary">Primary button</Button>
+            <Button color={"primary"}>Primary button</Button>
             <Button color="secondary">Secondary button</Button>
             <Button color="ghost">Ghost button</Button>
             <Button size="l">Large primary button</Button>

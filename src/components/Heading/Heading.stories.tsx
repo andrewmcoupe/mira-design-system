@@ -6,7 +6,6 @@ import Heading from "./Heading";
 
 export default {
   title: "Components/Heading",
-  // component: Heading,
   argTypes: {
     children: {
       control: "text",
@@ -21,12 +20,6 @@ export default {
       name: "Heading element",
       defaultValue: "h1",
     },
-    fluid: {
-      control: "boolean",
-      name: "Fluid",
-      defaultValue: false,
-      description: "Whether the heading should grow with the viewport",
-    },
   },
 } as ComponentMeta<typeof Heading>;
 
@@ -35,7 +28,3 @@ const Template: ComponentStory<typeof Heading> = (
 ) => <Heading {...args} />;
 
 export const Default = Template.bind({});
-export const Fluid = Template.bind({});
-Fluid.args = {
-  fluid: true,
-};

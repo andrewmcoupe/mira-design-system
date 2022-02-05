@@ -15,7 +15,7 @@ export default {
     size: {
       control: {
         type: "select",
-        options: ["default", "l"],
+        options: ["default", "large"],
       },
       description: "The size of the button",
     },
@@ -58,7 +58,12 @@ Stretch.args = {
 
 export const Large = Template.bind({});
 Large.args = {
-  size: "l",
+  size: "large",
+};
+
+export const Pill = Template.bind({});
+Pill.args = {
+  pill: true,
 };
 
 export const AllTogetherNow = () => (
@@ -74,11 +79,11 @@ export const AllTogetherNow = () => (
     <Button color="secondary">Secondary button</Button>
     <Button color="ghost">Ghost button</Button>
     <Button stretch>Stretch button</Button>
-    <Button size="l">Large primary button</Button>
-    <Button color={"secondary"} size="l">
+    <Button size="large">Large primary button</Button>
+    <Button color={"secondary"} size="large">
       Large secondary button
     </Button>
-    <Button color={"ghost"} size="l">
+    <Button color={"ghost"} size="large">
       Large ghost button
     </Button>
   </section>
