@@ -21,7 +21,7 @@ const Button = styled("button", {
   },
 
   defaultVariants: {
-    color: "primary",
+    variant: "red",
   },
   variants: {
     pill: {
@@ -40,29 +40,46 @@ const Button = styled("button", {
         width: "100%",
       },
     },
-    color: {
-      primary: {
-        backgroundColor: "$pink11",
+    variant: {
+      red: {
+        backgroundColor: "$red10",
         color: "white",
-        border: "1px solid $pink11",
+        border: "1px solid $red10",
+
         "&:hover": {
-          outline: "solid 1px $pink11",
+          backgroundColor: "$red11",
+        },
+      },
+      transparentRed: {
+        backgroundColor: "transparent",
+        color: "$red10",
+        border: "1px solid $red10",
+
+        "&:hover": {
+          backgroundColor: "$red11",
+        },
+      },
+      green: {
+        backgroundColor: "$green10",
+        border: "1px solid $green10",
+        color: "white",
+        "&:hover": {
+          backgroundColor: "$green11",
+        },
+      },
+      blue: {
+        backgroundColor: "$blue10",
+        border: "1px solid $blue10",
+        color: "white",
+        "&:hover": {
+          backgroundColor: "$blue11",
         },
       },
       ghost: {
         backgroundColor: "transparent",
-        color: "$pink11",
-        border: "none",
+        color: "$hiContrast",
         "&:hover": {
-          outline: "solid 1px $pink11",
-        },
-      },
-      secondary: {
-        border: "1px solid $pink11",
-        backgroundColor: "transparent",
-        color: "$pink11",
-        "&:hover": {
-          outline: "solid 1px $pink11",
+          backgroundColor: "$gray4",
         },
       },
     },
