@@ -14,7 +14,7 @@ import {
 } from "@radix-ui/colors";
 
 export const globalStyles = globalCss({
-  "*": { margin: 0 },
+  "*": { margin: 0, fontFamily: "$recursive, sans-serif" },
   "*::before": {
     boxSizing: "border-box",
   },

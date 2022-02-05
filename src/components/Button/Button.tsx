@@ -3,7 +3,7 @@ import { styled } from "../../../stitches.config";
 const Button = styled("button", {
   borderRadius: "$2",
   padding: "$2",
-  fontSize: "$1",
+  fontSize: "$3",
   cursor: "pointer",
 
   "&:hover": {
@@ -27,7 +27,7 @@ const Button = styled("button", {
     pill: {
       true: {
         borderRadius: "$pill",
-      }
+      },
     },
     size: {
       large: {
