@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Container as={"main"} css={{ fontFamily: "$recursive" }}>
-        <Heading fluid={true}>Welcome to Mira Design System</Heading>
+        <Heading>Welcome to Mira Design System</Heading>
         <section>
           <Heading as={"h2"} css={{ fontSize: "$2" }}>
             Buttons
@@ -39,11 +39,11 @@ const Home: NextPage = () => {
             <Button color={"primary"}>Primary button</Button>
             <Button color="secondary">Secondary button</Button>
             <Button color="ghost">Ghost button</Button>
-            <Button size="l">Large primary button</Button>
-            <Button color={"secondary"} size="l">
+            <Button size={"large"}>Large primary button</Button>
+            <Button color={"secondary"} size={"large"}>
               Large secondary button
             </Button>
-            <Button color={"ghost"} size="l">
+            <Button color={"ghost"} size={"large"}>
               Large ghost button
             </Button>
             <Button stretch>Stretch button</Button>
