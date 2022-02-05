@@ -54,6 +54,13 @@ export const { styled, getCssText, theme, css } = createStitches({
       paddingLeft: value,
       paddingRight: value,
     }),
+    mb: (value: any) => ({
+      marginBottom: value,
+    }),
+    my: (value: any) => ({
+      marginTop: value,
+      marginBottom: value,
+    }),
   },
   media: {
     bp1: "(min-width: 520px)",
@@ -76,8 +83,6 @@ export const { styled, getCssText, theme, css } = createStitches({
       ...blue,
       ...red,
       ...green,
-      ...yellow,
-      ...pink,
     },
     fontSizes: {
       1: "12px",
@@ -89,6 +94,8 @@ export const { styled, getCssText, theme, css } = createStitches({
       7: "27px",
       8: "35px",
       9: "59px",
+      10: "72px",
+      11: "96px",
     },
     space: {
       1: "8px",

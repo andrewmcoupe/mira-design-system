@@ -1,17 +1,64 @@
 import React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Button, Container, Heading } from "../components";
-import { styled } from "../../stitches.config";
+import { Button, Container, Heading, Badge, Text } from "../components";
+import { styled, theme } from "../../stitches.config";
 
 const ColourSquare = styled("span", {
   minHeight: "100px",
+  borderRadius: "$1",
 });
+
 const DottedLeftContainer = styled("div", {
   paddingLeft: "$2",
   borderLeft: "dotted",
   marginBottom: "$4",
 });
+
+const AutoFillingGrid = styled("div", {
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+  gap: "16px",
+});
+
+const Level2Heading: React.FC = ({ children }) => (
+  <Heading as={"h2"} css={{ fontSize: "$7" }}>
+    {children}
+  </Heading>
+);
+
+const categorisedColors = Object.keys(theme.colors).reduce(
+  (
+    acc: {
+      reds: string[];
+      greens: string[];
+      blues: string[];
+      contrast: string[];
+    },
+    curr: string
+  ) => {
+    if (curr.includes("red")) {
+      acc.reds.push(curr);
+    }
+    if (curr.includes("blue")) {
+      acc.blues.push(curr);
+    }
+    if (curr.includes("green")) {
+      acc.greens.push(curr);
+    }
+    if (curr.includes("Contrast")) {
+      acc.contrast.push(curr);
+    }
+
+    return acc;
+  },
+  {
+    reds: [],
+    greens: [],
+    blues: [],
+    contrast: [],
+  }
+);
 
 const Home: NextPage = () => {
   return (
@@ -23,11 +70,42 @@ const Home: NextPage = () => {
       </Head>
 
       <Container as={"main"} css={{ fontFamily: "$recursive" }}>
-        <Heading>Welcome to Mira Design System</Heading>
+        <Heading>Mira Design System</Heading>
         <section>
-          <Heading as={"h2"} css={{ fontSize: "$2" }}>
-            Buttons
-          </Heading>
+          <DottedLeftContainer>
+            <Level2Heading>Headings</Level2Heading>
+            <Heading css={{ my: 0 }}>The white husky</Heading>
+            <Heading
+              css={{
+                my: 0,
+                fontSize: "$5",
+                "@bp2": {
+                  fontSize: "$7",
+                },
+              }}
+            >
+              The white husky
+            </Heading>
+            <Heading
+              css={{
+                my: 0,
+                fontSize: "$4",
+                "@bp2": {
+                  fontSize: "$6",
+                },
+              }}
+            >
+              The white husky
+            </Heading>
+          </DottedLeftContainer>
+          <DottedLeftContainer>
+            <Level2Heading>Text</Level2Heading>
+            <Text size={"1"}>The white husky howls in the night</Text>
+            <Text size={"2"}>The white husky howls in the night</Text>
+            <Text size={"3"}>The white husky howls in the night</Text>
+            <Text size={"4"}>The white husky howls in the night</Text>
+          </DottedLeftContainer>
+          <Level2Heading>Badges</Level2Heading>
           <DottedLeftContainer
             css={{
               display: "grid",
@@ -36,64 +114,109 @@ const Home: NextPage = () => {
               alignItems: "start",
             }}
           >
-            <Button color={"primary"}>Primary button</Button>
-            <Button color="secondary">Secondary button</Button>
-            <Button color="ghost">Ghost button</Button>
-            <Button size={"large"}>Large primary button</Button>
-            <Button color={"secondary"} size={"large"}>
-              Large secondary button
-            </Button>
-            <Button color={"ghost"} size={"large"}>
-              Large ghost button
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              <Badge color={"red"}>white husky</Badge>
+              <Badge color={"red"} unfilled={true}>
+                white husky
+              </Badge>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              <Badge color={"green"}>white husky</Badge>
+
+              <Badge color={"green"} unfilled={true}>
+                white husky
+              </Badge>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              <Badge color={"blue"}>white husky</Badge>
+              <Badge color={"blue"} unfilled={true}>
+                white husky
+              </Badge>
+            </div>
+          </DottedLeftContainer>
+          <Level2Heading>Buttons</Level2Heading>
+          <DottedLeftContainer
+            css={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+              gap: "16px",
+              alignItems: "start",
+            }}
+          >
+            <Button variant={"red"}>Primary button</Button>
+            <Button variant={"green"}>Green button</Button>
+            <Button variant="blue">Blue button</Button>
+            <Button variant={"ghost"}>Ghost button</Button>
+            <Button size={"large"}>Large button</Button>
+            <Button variant={"ghost"} size={"large"}>
+              Large ghost
             </Button>
             <Button stretch>Stretch button</Button>
           </DottedLeftContainer>
         </section>
         <DottedLeftContainer>
-          <Heading as={"h2"} css={{ fontSize: "$2" }}>
-            Colours
-          </Heading>
-          <p>Pink</p>
+          <Level2Heading>Colours</Level2Heading>
+          <Heading css={{ fontSize: "$4", my: "$4" }}>Reds</Heading>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(100px, 1fr))",
+          <AutoFillingGrid
+            css={{
+              gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
               gap: "1px",
             }}
           >
-            <ColourSquare css={{ backgroundColor: "$pink1" }} />
-            <ColourSquare css={{ backgroundColor: "$pink2" }} />
-            <ColourSquare css={{ backgroundColor: "$pink3" }} />
-            <ColourSquare css={{ backgroundColor: "$pink4" }} />
-            <ColourSquare css={{ backgroundColor: "$pink5" }} />
-            <ColourSquare css={{ backgroundColor: "$pink6" }} />
-            <ColourSquare css={{ backgroundColor: "$pink7" }} />
-            <ColourSquare css={{ backgroundColor: "$pink8" }} />
-            <ColourSquare css={{ backgroundColor: "$pink9" }} />
-            <ColourSquare css={{ backgroundColor: "$pink10" }} />
-            <ColourSquare css={{ backgroundColor: "$pink11" }} />
-          </div>
-          <p>Blue</p>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(12, minmax(20px, 1fr))",
+            {categorisedColors.reds.map((color) => (
+              <ColourSquare
+                key={color}
+                css={{
+                  backgroundColor: `$${color}`,
+                  display: "grid",
+                  placeItems: "center",
+                }}
+              >
+                {color}
+              </ColourSquare>
+            ))}
+          </AutoFillingGrid>
+          <Heading css={{ fontSize: "$4", my: "$4" }}>Blues</Heading>
+          <AutoFillingGrid
+            css={{
+              gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
               gap: "1px",
             }}
           >
-            <ColourSquare css={{ backgroundColor: "$blue1" }} />
-            <ColourSquare css={{ backgroundColor: "$blue2" }} />
-            <ColourSquare css={{ backgroundColor: "$blue3" }} />
-            <ColourSquare css={{ backgroundColor: "$blue4" }} />
-            <ColourSquare css={{ backgroundColor: "$blue5" }} />
-            <ColourSquare css={{ backgroundColor: "$blue6" }} />
-            <ColourSquare css={{ backgroundColor: "$blue7" }} />
-            <ColourSquare css={{ backgroundColor: "$blue8" }} />
-            <ColourSquare css={{ backgroundColor: "$blue9" }} />
-            <ColourSquare css={{ backgroundColor: "$blue10" }} />
-            <ColourSquare css={{ backgroundColor: "$blue11" }} />
-          </div>
+            {categorisedColors.blues.map((color) => (
+              <ColourSquare
+                key={color}
+                css={{
+                  backgroundColor: `$${color}`,
+                  display: "grid",
+                  placeItems: "center",
+                }}
+              >
+                {color}
+              </ColourSquare>
+            ))}
+          </AutoFillingGrid>
+          <Heading css={{ fontSize: "$4", my: "$4" }}>Greens</Heading>
+          <AutoFillingGrid
+            css={{
+              gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
+              gap: "1px",
+            }}
+          >
+            {categorisedColors.greens.map((color) => (
+              <ColourSquare
+                key={color}
+                css={{
+                  backgroundColor: `$${color}`,
+                  display: "grid",
+                  placeItems: "center",
+                }}
+              >
+                {color}
+              </ColourSquare>
+            ))}
+          </AutoFillingGrid>
         </DottedLeftContainer>
       </Container>
     </div>

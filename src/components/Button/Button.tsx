@@ -12,7 +12,6 @@ const Button = styled("button", {
 
   "&:focus": {
     outlineOffset: "1px",
-    outlineColor: "$pink11",
   },
 
   "&:disabled": {

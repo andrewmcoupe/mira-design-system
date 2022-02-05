@@ -7,8 +7,8 @@ const Heading = styled("h1", {
   fontSize: "$6",
   marginBottom: "$3",
 
-  '@bp2': {
-    fontSize: '$8',
+  "@bp2": {
+    fontSize: "$8",
   },
 });
 

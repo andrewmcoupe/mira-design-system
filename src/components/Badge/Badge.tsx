@@ -9,6 +9,10 @@ const unfilledCompoundStylesFor = (color: ColorKeys) => ({
 });
 
 const Badge = styled("span", {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  maxWidth: "max-content",
   padding: "$1",
   borderRadius: "$pill",
   border: "solid 1px currentColor",
