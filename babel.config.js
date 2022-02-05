@@ -10,7 +10,7 @@ const presets =
         ],
         "@babel/preset-typescript",
       ]
-    : null;
+    : ["next/babel"];
 
 const plugins = [];
 
