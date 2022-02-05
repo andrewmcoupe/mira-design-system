@@ -47,7 +47,7 @@ export const globalStyles = globalCss({
   },
 });
 
-export const { styled, getCssText } = createStitches({
+export const { styled, getCssText, theme, css } = createStitches({
   media: {
     bp1: "(min-width: 520px)",
     bp2: "(min-width: 900px)",
