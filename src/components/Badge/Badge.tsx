@@ -1,9 +1,11 @@
 import { styled, theme } from "../../../stitches.config";
 
-const unfilledCompoundStylesFor = (color: any) => ({
+type ColorKeys = keyof typeof theme["colors"];
+
+const unfilledCompoundStylesFor = (color: ColorKeys) => ({
   backgroundColor: "transparent",
-  color,
-  borderColor: color,
+  color: `$${color}`,
+  borderColor: `$${color}`,
 });
 
 const Badge = styled("span", {
@@ -20,22 +22,22 @@ const Badge = styled("span", {
     {
       unfilled: true,
       color: "red",
-      css: unfilledCompoundStylesFor("$red10"),
+      css: unfilledCompoundStylesFor("red10"),
     },
     {
       unfilled: true,
       color: "blue",
-      css: unfilledCompoundStylesFor("$blue10"),
+      css: unfilledCompoundStylesFor("blue10"),
     },
     {
       unfilled: true,
       color: "green",
-      css: unfilledCompoundStylesFor("$green10"),
+      css: unfilledCompoundStylesFor("green10"),
     },
     {
       unfilled: true,
       color: "contrast",
-      css: unfilledCompoundStylesFor("$hiContrast"),
+      css: unfilledCompoundStylesFor("hiContrast"),
     },
   ],
   variants: {

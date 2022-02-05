@@ -77,6 +77,7 @@ const Button = styled("button", {
       },
       ghost: {
         backgroundColor: "transparent",
+        border: "none",
         color: "$hiContrast",
         "&:hover": {
           backgroundColor: "$gray4",
