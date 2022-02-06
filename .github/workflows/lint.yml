@@ -18,13 +18,13 @@ jobs:
       - run: yarn
 
       # ESLint
-      - run: eslint --cache --fix --ext .js,.jsx,.ts,.tsx src
+      - run: yarn eslint --cache --fix --ext .js,.jsx,.ts,.tsx src
 
       # Prettier
-      - run: prettier --write
+      - run: yarn prettier --write
 
       # Compile TypeScript
-      - run: tsc -p tsconfig.json --noEmit
+      - run: yarn tsc -p tsconfig.json --noEmit
 
       # Run tests
       - run: yarn test
