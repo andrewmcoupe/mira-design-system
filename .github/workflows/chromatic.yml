@@ -10,6 +10,8 @@ on:
 # List of jobs
 jobs:
   deploy:
+    needs:
+      - lint
     # Operating System
     runs-on: ubuntu-latest
     # Job steps
