@@ -9,7 +9,7 @@ on:
 
 # List of jobs
 jobs:
-  test:
+  deploy:
     # Operating System
     runs-on: ubuntu-latest
     # Job steps

@@ -14,7 +14,7 @@ const Badge = styled("span", {
   justifyContent: "center",
   fontSize: "0.75rem",
   maxWidth: "max-content",
-  padding: "$xs",
+  padding: "$1",
   borderRadius: "$pill",
   border: "solid 1px currentColor",
 
