@@ -5,6 +5,7 @@ const Button = styled("button", {
   padding: "$2",
   fontSize: "$3",
   cursor: "pointer",
+  userSelect: "none",
 
   "&:hover": {
     outlineOffset: "1px",

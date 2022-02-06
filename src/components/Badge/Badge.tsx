@@ -12,11 +12,11 @@ const Badge = styled("span", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  fontSize: "0.75rem",
   maxWidth: "max-content",
-  padding: "$1",
+  padding: "$xs",
   borderRadius: "$pill",
   border: "solid 1px currentColor",
-  px: "$2",
 
   defaultVariants: {
     color: "red",

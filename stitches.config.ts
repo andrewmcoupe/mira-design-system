@@ -98,6 +98,7 @@ export const { styled, getCssText, theme, css } = createStitches({
       11: "96px",
     },
     space: {
+      xs: "6px",
       1: "8px",
       2: "16px",
       3: "24px",
