@@ -1,0 +1,30 @@
+
+name: Lint
+on: push
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the Repo
+      - uses: actions/checkout@v2
+
+      # Install Node 12
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      # Install dependencies
+      - run: yarn
+
+      # ESLint
+      - run: eslint --cache --fix --ext .js,.jsx,.ts,.tsx src
+
+      # Prettier
+      - run: prettier --write
+
+      # Compile TypeScript
+      - run: tsc -p tsconfig.json --noEmit
+
+      # Run tests
+      - run: yarn test
