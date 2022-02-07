@@ -8,23 +8,22 @@ jobs:
       # Checkout the Repo
       - uses: actions/checkout@v2
 
-      # Install Node 12
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
           node-version: 12
 
-      # Install dependencies
-      - run: yarn
+      - name: Install dependencies
+        run: yarn
 
-      # ESLint
-      - run: yarn eslint --cache --fix --ext .js,.jsx,.ts,.tsx src
+      - name: ESLint
+        run: yarn eslint --cache --fix --ext .js,.jsx,.ts,.tsx src
 
-      # Prettier
-      - run: yarn prettier --write
+      - name: Prettier
+        run: yarn prettier --write
 
-      # Compile TypeScript
-      - run: yarn tsc -p tsconfig.json --noEmit
+      - name: Compile TypeScript
+        run: yarn tsc -p tsconfig.json --noEmit
 
-      # Run tests
-      - run: yarn test
+      - name: Unit tests
+        run: yarn test
