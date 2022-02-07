@@ -14,23 +14,42 @@ export default {
   },
 } as ComponentMeta<typeof Card>;
 
-// const Template: ComponentStory<typeof Card> = (
-//   args: ComponentMeta<typeof Card>
-// ) => <Card {...args} />;
+export const Default = () => (
+  <Card>
+    <Card.Body>
+      <Text>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu
+        malesuada nunc.
+      </Text>
+      <Text>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu
+        malesuada nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Sed eu malesuada nunc. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Sed eu malesuada nunc.
+      </Text>
+      <Text>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu
+        malesuada nunc.
+      </Text>
+    </Card.Body>
+  </Card>
+);
 
 export const WithHeaderAndFooter = () => (
   <Card>
     <Card.Header>
       <Text>Card Header</Text>
     </Card.Header>
-    <Card.Body>
+    <Card.Body css={{ my: "$2" }}>
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu
-        malesuada nunc.
+        malesuada nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Sed eu malesuada nunc. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Sed eu malesuada nunc.
       </Text>
     </Card.Body>
     <Card.Footer>
-      <Button>Learn more</Button>
+      <Button variant={"green"}>Learn more</Button>
     </Card.Footer>
   </Card>
 );

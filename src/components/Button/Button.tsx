@@ -2,7 +2,7 @@ import { styled } from "../../../stitches.config";
 
 const Button = styled("button", {
   borderRadius: "$2",
-  padding: "$2",
+  padding: "$1 $2",
   fontSize: "$3",
   cursor: "pointer",
   userSelect: "none",

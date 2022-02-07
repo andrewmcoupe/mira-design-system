@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Badge from "./Badge";
 
 export default {
-  title: "Components/Pill",
+  title: "Components/Badge",
   argTypes: {
     children: {
       control: "text",

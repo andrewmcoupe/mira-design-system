@@ -1,11 +1,12 @@
 import React from "react";
 import { styled } from "../../../stitches.config";
-import Button from "../Button/Button";
+import type { WithChildren } from "../../utils/types";
 
 const CardBase = styled("article", {
   borderRadius: "$2",
   border: "1px solid $gray7",
   backgroundColor: "$loContrast",
+  padding: "$4",
 });
 
 const CardWrapper = styled("div", {
@@ -14,23 +15,18 @@ const CardWrapper = styled("div", {
 });
 
 const CardHeader = styled("header", {
-  fontWeight: "bold",
+  fontWeight: "$bold",
   fontSize: "$5",
-  padding: "$2",
 });
 
 const CardBody = styled("section", {
-  padding: "$2",
   flex: "1",
 });
 
 const CardFooter = styled("footer", {
   fontWeight: "bold",
   fontSize: "$2",
-  padding: "$2",
 });
-
-type WithChildren<T = {}> = T & { children?: React.ReactNode };
 
 const Card = (props: WithChildren) => (
   <CardBase>
