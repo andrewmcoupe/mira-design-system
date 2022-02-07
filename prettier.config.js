@@ -1,3 +1,3 @@
-// module.exports = {
-//   parser: "babel",
-// };
+module.exports = {
+  parser: "babel",
+};
