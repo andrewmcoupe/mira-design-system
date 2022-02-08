@@ -61,6 +61,10 @@ export const { styled, getCssText, theme, css } = createStitches({
       marginTop: value,
       marginBottom: value,
     }),
+    py: (value: any) => ({
+      paddingTop: value,
+      paddingBottom: value,
+    }),
   },
   media: {
     bp1: "(min-width: 520px)",
