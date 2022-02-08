@@ -2,7 +2,6 @@ import React, { ReactElement, useState } from "react";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import { CSS } from "@stitches/react";
 import { styled } from "../../../stitches.config";
-import { WithChildren } from "../../utils/types";
 
 const Presentational = styled("div", {
   display: "flex",
@@ -43,28 +42,18 @@ const IconWrapper = styled("span", {
   marginLeft: "$2",
 });
 
-type SelectProps = WithChildren<
-  {
-    defaultSelected?: string;
-  } & JSX.IntrinsicElements["select"]
->;
-
-type SelectProps2 = React.ComponentProps<typeof NativeSelect> & {
+type SelectProps = React.ComponentProps<typeof NativeSelect> & {
   css?: CSS;
 };
 
-type foo = SelectProps2["css"];
-
 const StyledSelect = React.forwardRef<
   React.ElementRef<typeof NativeSelect>,
-  SelectProps2
+  SelectProps
 >(({ css, ...props }, forwardedRef: React.ForwardedRef<HTMLSelectElement>) => {
   const [value, setValue] = useState(() => {
     if (props.defaultValue) {
       return props.defaultValue;
     }
-
-    // return "";
   });
 
   const childrenArray = React.Children.toArray(props.children);
