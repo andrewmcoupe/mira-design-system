@@ -14,11 +14,7 @@ const Button = styled("button", {
   border: "none",
 
   "&:hover": {
-    outlineOffset: "1px",
-  },
-
-  "&:focus": {
-    outlineOffset: "1px",
+    opacity: "0.8",
   },
 
   "&:disabled": {
@@ -39,47 +35,27 @@ const Button = styled("button", {
       red: {
         backgroundColor: "$red10",
         color: "white",
-
-        "&:hover": {
-          backgroundColor: "$red11",
-        },
       },
       transparentRed: {
         backgroundColor: "transparent",
         color: "$red10",
-
-        "&:hover": {
-          backgroundColor: "$red11",
-        },
       },
       green: {
         backgroundColor: "$green10",
         color: "white",
-
-        "&:hover": {
-          backgroundColor: "$green11",
-        },
       },
       blue: {
         backgroundColor: "$blue10",
         color: "white",
-
-        "&:hover": {
-          backgroundColor: "$blue11",
-        },
       },
       orange: {
         backgroundColor: "$orange10",
         color: "white",
-
-        "&:hover": {
-          backgroundColor: "$orange11",
-        },
       },
       ghost: {
         backgroundColor: "transparent",
-        border: "none",
         color: "$hiContrast",
+
         "&:hover": {
           backgroundColor: "$gray4",
         },

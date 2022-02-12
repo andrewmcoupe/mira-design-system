@@ -1,12 +1,4 @@
-import { styled, theme } from "../../../stitches.config";
-
-type ColorKeys = keyof typeof theme["colors"];
-
-const unfilledCompoundStylesFor = (color: ColorKeys) => ({
-  backgroundColor: "transparent",
-  color: `$${color}`,
-  borderColor: `$${color}`,
-});
+import { styled } from "../../../stitches.config";
 
 const Badge = styled("span", {
   display: "flex",
