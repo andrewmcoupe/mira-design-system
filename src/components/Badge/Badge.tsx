@@ -12,56 +12,31 @@ const Badge = styled("span", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  fontSize: "0.75rem",
+  fontSize: "$2",
   maxWidth: "max-content",
-  padding: "$xs",
-  borderRadius: "$pill",
-  border: "solid 1px currentColor",
+  padding: "3px 8px",
+  borderRadius: "$1",
 
   defaultVariants: {
     color: "red",
-    unfilled: false,
   },
-  compoundVariants: [
-    {
-      unfilled: true,
-      color: "red",
-      css: unfilledCompoundStylesFor("red10"),
-    },
-    {
-      unfilled: true,
-      color: "blue",
-      css: unfilledCompoundStylesFor("blue10"),
-    },
-    {
-      unfilled: true,
-      color: "green",
-      css: unfilledCompoundStylesFor("green10"),
-    },
-    {
-      unfilled: true,
-      color: "contrast",
-      css: unfilledCompoundStylesFor("hiContrast"),
-    },
-  ],
   variants: {
-    unfilled: {
-      true: {
-        backgroundColor: "transparent",
-      },
-    },
     color: {
       red: {
-        backgroundColor: "$red10",
-        color: "white",
+        backgroundColor: "$red4",
+        color: "$red11",
       },
       green: {
-        backgroundColor: "$green10",
-        color: "white",
+        backgroundColor: "$green4",
+        color: "$green11",
       },
       blue: {
-        backgroundColor: "$blue10",
-        color: "white",
+        backgroundColor: "$blue4",
+        color: "$blue11",
+      },
+      orange: {
+        backgroundColor: "$orange4",
+        color: "$orange11",
       },
       contrast: {
         backgroundColor: "$hiContrast",

@@ -33,6 +33,7 @@ const categorisedColors = Object.keys(theme.colors).reduce(
       reds: string[];
       greens: string[];
       blues: string[];
+      oranges: string[];
       contrast: string[];
     },
     curr: string
@@ -46,6 +47,9 @@ const categorisedColors = Object.keys(theme.colors).reduce(
     if (curr.includes("green")) {
       acc.greens.push(curr);
     }
+    if (curr.includes("orange")) {
+      acc.oranges.push(curr);
+    }
     if (curr.includes("Contrast")) {
       acc.contrast.push(curr);
     }
@@ -57,6 +61,7 @@ const categorisedColors = Object.keys(theme.colors).reduce(
     greens: [],
     blues: [],
     contrast: [],
+    oranges: [],
   }
 );
 
@@ -69,7 +74,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Container as={"main"} css={{ fontFamily: "$recursive" }}>
+      <Container as={"main"} css={{ fontFamily: "$poppins" }}>
         <Heading>Mira Design System</Heading>
         <section>
           <DottedLeftContainer>
@@ -205,6 +210,25 @@ const Home: NextPage = () => {
             }}
           >
             {categorisedColors.greens.map((color) => (
+              <ColourSquare
+                key={color}
+                css={{
+                  backgroundColor: `$${color}`,
+                  display: "grid",
+                  placeItems: "center",
+                }}
+              >
+                {color}
+              </ColourSquare>
+            ))}
+          </AutoFillingGrid>
+          <AutoFillingGrid
+            css={{
+              gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
+              gap: "1px",
+            }}
+          >
+            {categorisedColors.oranges.map((color) => (
               <ColourSquare
                 key={color}
                 css={{

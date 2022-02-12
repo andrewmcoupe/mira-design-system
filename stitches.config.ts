@@ -1,12 +1,11 @@
 import { createStitches, createTheme, globalCss } from "@stitches/react";
 
 import {
-  yellow,
+  orange,
   gray,
   blue,
   red,
   green,
-  pink,
   grayDark,
   blueDark,
   redDark,
@@ -15,7 +14,7 @@ import {
 } from "@radix-ui/colors";
 
 export const globalStyles = globalCss({
-  "*": { margin: 0, fontFamily: "$recursive, sans-serif" },
+  "*": { margin: 0, fontFamily: "$poppins, sans-serif" },
   "*::before": {
     boxSizing: "border-box",
   },
@@ -79,6 +78,7 @@ export const { styled, getCssText, theme, css } = createStitches({
     fonts: {
       system: "system-ui",
       recursive: "Recursive",
+      poppins: '"Poppins", sans-serif',
     },
     colors: {
       hiContrast: "hsl(206,10%,5%)",
@@ -87,10 +87,11 @@ export const { styled, getCssText, theme, css } = createStitches({
       ...blue,
       ...red,
       ...green,
+      ...orange,
     },
     fontSizes: {
       1: "12px",
-      2: "13px",
+      2: "14px",
       3: "16px",
       4: "17px",
       5: "19px",
@@ -122,7 +123,7 @@ export const { styled, getCssText, theme, css } = createStitches({
       bold: "bold",
     },
     radii: {
-      1: "3px",
+      1: "4px",
       2: "6px",
       3: "8px",
       circle: "50%",

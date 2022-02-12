@@ -1,5 +1,5 @@
 import { globalStyles } from "../stitches.config";
-import "@fontsource/recursive";
+import "@fontsource/poppins";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

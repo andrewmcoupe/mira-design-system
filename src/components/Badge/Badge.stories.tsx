@@ -18,7 +18,7 @@ export default {
     },
     color: {
       control: "select",
-      options: ["red", "green", "blue", "contrast"],
+      options: ["red", "green", "blue", "orange", "contrast"],
       defaultValue: "red",
     },
   },
@@ -29,7 +29,3 @@ const Template: ComponentStory<typeof Badge> = (
 ) => <Badge {...args} />;
 
 export const Default = Template.bind({});
-export const Unfilled = Template.bind({});
-Unfilled.args = {
-  unfilled: true,
-};
