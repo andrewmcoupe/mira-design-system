@@ -12,6 +12,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@fontsource/poppins": "^4.5.1",
     "@fontsource/recursive": "^4.5.1",
     "@radix-ui/colors": "^0.1.8",
     "@radix-ui/react-icons": "^1.0.3",
