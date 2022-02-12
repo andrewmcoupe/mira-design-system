@@ -11,13 +11,6 @@ export default {
       name: "Button text",
       defaultValue: "Mira button",
     },
-    size: {
-      control: {
-        type: "select",
-        options: ["default", "large"],
-      },
-      description: "The size of the button",
-    },
     stretch: {
       control: {
         type: "boolean",
@@ -25,7 +18,10 @@ export default {
       description: "Whether the button should stretch to fill its container",
     },
     variant: {
-      control: { type: "select", options: ["red", "green", "blue", "ghost"] },
+      control: {
+        type: "select",
+        options: ["red", "green", "blue", "orange", "ghost"],
+      },
       description: "The color of the button",
     },
   },
@@ -35,8 +31,8 @@ const Template: ComponentStory<typeof Button> = (
   args: ComponentMeta<typeof Button>
 ) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Red = Template.bind({});
+Red.args = {
   variant: "red",
 };
 
@@ -50,6 +46,11 @@ Blue.args = {
   variant: "blue",
 };
 
+export const Orange = Template.bind({});
+Orange.args = {
+  variant: "orange",
+};
+
 export const Ghost = Template.bind({});
 Ghost.args = {
   variant: "ghost",
@@ -58,14 +59,4 @@ Ghost.args = {
 export const Stretch = Template.bind({});
 Stretch.args = {
   stretch: true,
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: "large",
-};
-
-export const Pill = Template.bind({});
-Pill.args = {
-  pill: true,
 };

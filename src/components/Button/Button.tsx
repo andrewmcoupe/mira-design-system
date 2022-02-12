@@ -1,11 +1,17 @@
 import { styled } from "../../../stitches.config";
 
 const Button = styled("button", {
-  borderRadius: "$2",
-  padding: "$1 $2",
-  fontSize: "$3",
+  borderRadius: "$3",
+  padding: "$3",
+  fontSize: "$4",
   cursor: "pointer",
   userSelect: "none",
+  height: "33px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "max-content",
+  border: "none",
 
   "&:hover": {
     outlineOffset: "1px",
@@ -24,17 +30,6 @@ const Button = styled("button", {
     variant: "red",
   },
   variants: {
-    pill: {
-      true: {
-        borderRadius: "$pill",
-      },
-    },
-    size: {
-      large: {
-        fontSize: "$2",
-        padding: "$3",
-      },
-    },
     stretch: {
       true: {
         width: "100%",
@@ -44,7 +39,6 @@ const Button = styled("button", {
       red: {
         backgroundColor: "$red10",
         color: "white",
-        border: "1px solid $red10",
 
         "&:hover": {
           backgroundColor: "$red11",
@@ -53,7 +47,6 @@ const Button = styled("button", {
       transparentRed: {
         backgroundColor: "transparent",
         color: "$red10",
-        border: "1px solid $red10",
 
         "&:hover": {
           backgroundColor: "$red11",
@@ -61,18 +54,26 @@ const Button = styled("button", {
       },
       green: {
         backgroundColor: "$green10",
-        border: "1px solid $green10",
         color: "white",
+
         "&:hover": {
           backgroundColor: "$green11",
         },
       },
       blue: {
         backgroundColor: "$blue10",
-        border: "1px solid $blue10",
         color: "white",
+
         "&:hover": {
           backgroundColor: "$blue11",
+        },
+      },
+      orange: {
+        backgroundColor: "$orange10",
+        color: "white",
+
+        "&:hover": {
+          backgroundColor: "$orange11",
         },
       },
       ghost: {
