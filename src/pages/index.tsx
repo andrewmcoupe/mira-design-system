@@ -121,22 +121,15 @@ const Home: NextPage = () => {
           >
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               <Badge color={"red"}>white husky</Badge>
-              <Badge color={"red"} unfilled={true}>
-                white husky
-              </Badge>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               <Badge color={"green"}>white husky</Badge>
-
-              <Badge color={"green"} unfilled={true}>
-                white husky
-              </Badge>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               <Badge color={"blue"}>white husky</Badge>
-              <Badge color={"blue"} unfilled={true}>
-                white husky
-              </Badge>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              <Badge color={"orange"}>white husky</Badge>
             </div>
           </DottedLeftContainer>
           <Level2Heading>Buttons</Level2Heading>
@@ -151,11 +144,8 @@ const Home: NextPage = () => {
             <Button variant={"red"}>Primary button</Button>
             <Button variant={"green"}>Green button</Button>
             <Button variant="blue">Blue button</Button>
+            <Button variant="orange">Blue button</Button>
             <Button variant={"ghost"}>Ghost button</Button>
-            <Button size={"large"}>Large button</Button>
-            <Button variant={"ghost"} size={"large"}>
-              Large ghost
-            </Button>
             <Button stretch>Stretch button</Button>
           </DottedLeftContainer>
         </section>
