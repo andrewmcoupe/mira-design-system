@@ -88,6 +88,7 @@ export const { styled, getCssText, theme, css } = createStitches({
       ...red,
       ...green,
       ...orange,
+      cardBg: "white",
     },
     fontSizes: {
       1: "12px",
@@ -132,12 +133,15 @@ export const { styled, getCssText, theme, css } = createStitches({
   },
 });
 
-const darkTheme = createTheme({
+export const darkTheme = createTheme({
   colors: {
+    loContrast: "hsl(206,10%,5%)",
+    hiContrast: "hsl(206,10%,60%)",
     ...grayDark,
     ...blueDark,
     ...redDark,
     ...greenDark,
     ...pinkDark,
+    cardBg: "hsl(206,10%,15%)",
   },
 });

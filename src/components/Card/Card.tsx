@@ -5,13 +5,15 @@ import type { WithChildren } from "../../utils/types";
 const CardBase = styled("article", {
   borderRadius: "$2",
   border: "1px solid $gray7",
-  backgroundColor: "$loContrast",
+  backgroundColor: "$cardBg",
   padding: "$4",
 });
 
 const CardWrapper = styled("div", {
   display: "flex",
   flexDirection: "column",
+  gap: "$2",
+  height: "100%",
 });
 
 const CardHeader = styled("header", {

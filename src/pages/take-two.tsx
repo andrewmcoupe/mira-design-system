@@ -10,7 +10,6 @@ import {
   Text,
 } from "../components";
 import { styled } from "@stitches/react";
-import ThemeChanger from "../components/ThemeToggle/ThemeToggle";
 
 const AutoFillingGrid = styled("div", {
   display: "grid",
@@ -24,15 +23,7 @@ const Stack = styled("div", {
   flexWrap: "wrap",
 });
 
-const Header = styled("header", {
-  display: "flex",
-  gap: "16px",
-  flexWrap: "wrap",
-  alignItems: "center",
-  justifyContent: "space-between",
-});
-
-const Index = () => {
+const TakeTwo = () => {
   return (
     <div>
       <Head>
@@ -47,12 +38,6 @@ const Index = () => {
           gap: "$7",
         }}
       >
-        <Header>
-          <Text size={"2"} css={{ margin: 0 }}>
-            Mira Design System
-          </Text>
-          <ThemeChanger />
-        </Header>
         <section>
           {/* BADGES */}
           <Heading>Badges</Heading>
@@ -157,22 +142,15 @@ const Index = () => {
           <Heading>Text</Heading>
 
           <Stack css={{ flexDirection: "column" }}>
-            <Text css={{ margin: 0 }}>Size 1</Text>
             <Text size={"1"}>
               The white husky howled as I typed on my keyboard.
             </Text>
-            <Text css={{ margin: 0 }}>Size 2</Text>
-
             <Text size={"2"}>
               The white husky howled as I typed on my keyboard.
             </Text>
-            <Text css={{ margin: 0 }}>Size 3</Text>
-
             <Text size={"3"}>
               The white husky howled as I typed on my keyboard.
             </Text>
-            <Text css={{ margin: 0 }}>Size 4</Text>
-
             <Text size={"4"}>
               The white husky howled as I typed on my keyboard.
             </Text>
@@ -183,4 +161,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default TakeTwo;

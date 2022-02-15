@@ -5,9 +5,10 @@ const Text = styled("span", {
   margin: "0",
   fontWeight: 400,
   display: "block",
+  marginBottom: "$2",
 
   defaultVariants: {
-    size: "medium",
+    size: "3",
     color: "contrast",
   },
 
@@ -28,19 +29,16 @@ const Text = styled("span", {
     },
     size: {
       1: {
-        fontSize: "$2",
+        fontSize: "$1",
       },
       2: {
-        fontSize: "$3",
+        fontSize: "$2",
       },
       3: {
-        fontSize: "$5",
+        fontSize: "$3",
       },
       4: {
         fontSize: "$7",
-      },
-      5: {
-        fontSize: "$9",
       },
     },
   },

@@ -11,11 +11,6 @@ export default {
       name: "Text",
       defaultValue: "Ice the husky",
     },
-    unfilled: {
-      control: "boolean",
-      name: "Unfilled",
-      defaultValue: false,
-    },
     color: {
       control: "select",
       options: ["red", "green", "blue", "orange", "contrast"],
