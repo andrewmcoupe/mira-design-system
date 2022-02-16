@@ -79,6 +79,7 @@ const Index = () => {
             <Badge color={"green"}>Green</Badge>
             <Badge color={"blue"}>Blue</Badge>
             <Badge color={"orange"}>Orange</Badge>
+            <Badge color={"contrast"}>Contrast</Badge>
           </Stack>
         </section>
 
@@ -181,6 +182,8 @@ const Index = () => {
             <Text size={"4"}>
               The white husky howled as I typed on my keyboard.
             </Text>
+            <Text css={{ margin: 0 }}>Gradient</Text>
+
             <Text size={"4"} color={"gradient"}>
               The white husky howled as I typed on my keyboard. The text moved
               from red, to green, to blue in a matter of moments.
