@@ -47,6 +47,6 @@ ExtraLarge.args = {
 };
 
 export const Gradient = Template.bind({});
-ExtraLarge.args = {
+Gradient.args = {
   color: "gradient",
 };
