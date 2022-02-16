@@ -1,12 +1,14 @@
 import { styled } from "../../../stitches.config";
+import * as Icons from "@radix-ui/react-icons";
+import { ComponentProps } from "@stitches/react";
 
 const Button = styled("button", {
   borderRadius: "$3",
-  padding: "$3",
+  padding: "0 $3",
   fontSize: "$4",
   cursor: "pointer",
   userSelect: "none",
-  height: "33px",
+  height: "44px",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -64,4 +66,17 @@ const Button = styled("button", {
   },
 });
 
+export const IconButton = ({
+  icon,
+  ...props
+}: { icon: keyof typeof Icons } & ComponentProps<typeof Button>) => {
+  const IconElement = Icons[icon];
+  return (
+    <Button variant={props.variant} css={{ width: 44, padding: "0 8px" }}>
+      <div>
+        <IconElement width={22} height={22} />
+      </div>
+    </Button>
+  );
+};
 export default Button;

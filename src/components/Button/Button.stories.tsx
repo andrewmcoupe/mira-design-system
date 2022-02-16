@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Button from "./Button";
+import Button, { IconButton } from "./Button";
 
 export default {
   title: "Components/Button",
@@ -60,3 +60,5 @@ export const Stretch = Template.bind({});
 Stretch.args = {
   stretch: true,
 };
+
+export const IconBtn = () => <IconButton icon={"HomeIcon"} />;

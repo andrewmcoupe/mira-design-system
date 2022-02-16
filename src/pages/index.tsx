@@ -6,11 +6,55 @@ import {
   Card,
   Container,
   Heading,
+  IconButton,
   Select,
   Text,
 } from "../components";
 import { styled } from "@stitches/react";
 import ThemeChanger from "../components/ThemeToggle/ThemeToggle";
+import { theme } from "../../stitches.config";
+
+const categorisedColors = Object.keys(theme.colors).reduce(
+  (
+    acc: {
+      reds: string[];
+      greens: string[];
+      blues: string[];
+      oranges: string[];
+      contrast: string[];
+    },
+    curr: string
+  ) => {
+    if (curr.includes("red")) {
+      acc.reds.push(curr);
+    }
+    if (curr.includes("blue")) {
+      acc.blues.push(curr);
+    }
+    if (curr.includes("green")) {
+      acc.greens.push(curr);
+    }
+    if (curr.includes("orange")) {
+      acc.oranges.push(curr);
+    }
+    if (curr.includes("Contrast")) {
+      acc.contrast.push(curr);
+    }
+
+    return acc;
+  },
+  {
+    reds: [],
+    greens: [],
+    blues: [],
+    contrast: [],
+    oranges: [],
+  }
+);
+
+const ColourSquare = styled("span", {
+  minHeight: "20px",
+});
 
 const AutoFillingGrid = styled("div", {
   display: "grid",
@@ -68,6 +112,19 @@ const Index = () => {
             <Button variant={"blue"}>Blue</Button>
             <Button variant={"orange"}>Orange</Button>
             <Button variant={"ghost"}>Ghost</Button>
+          </Stack>
+        </section>
+
+        <section>
+          {/* ICON BUTTONS */}
+          <Heading>Icon buttons</Heading>
+
+          <Stack>
+            <IconButton variant={"red"} icon={"HomeIcon"} />
+            <IconButton variant={"green"} icon={"CaretRightIcon"} />
+            <IconButton variant={"blue"} icon={"TwitterLogoIcon"} />
+            <IconButton variant={"orange"} icon={"GitHubLogoIcon"} />
+            <IconButton variant={"ghost"} icon={"BarChartIcon"} />
           </Stack>
         </section>
 
@@ -188,6 +245,73 @@ const Index = () => {
               The white husky howled as I typed on my keyboard. The text moved
               from red, to green, to blue in a matter of moments.
             </Text>
+          </Stack>
+        </section>
+
+        <section>
+          {/* COLOURS */}
+          <Heading>Colors</Heading>
+          <Stack css={{ gap: "0px" }}>
+            <Stack css={{ gap: "0px", flexDirection: "column" }}>
+              {categorisedColors.reds.map((color) => (
+                <ColourSquare
+                  key={color}
+                  css={{
+                    width: 100,
+                    backgroundColor: `$${color}`,
+                    display: "grid",
+                    placeItems: "center",
+                  }}
+                >
+                  {color}
+                </ColourSquare>
+              ))}
+            </Stack>
+            <Stack css={{ gap: "0px", flexDirection: "column" }}>
+              {categorisedColors.greens.map((color) => (
+                <ColourSquare
+                  key={color}
+                  css={{
+                    width: 100,
+                    backgroundColor: `$${color}`,
+                    display: "grid",
+                    placeItems: "center",
+                  }}
+                >
+                  {color}
+                </ColourSquare>
+              ))}
+            </Stack>
+            <Stack css={{ gap: "0px", flexDirection: "column" }}>
+              {categorisedColors.blues.map((color) => (
+                <ColourSquare
+                  key={color}
+                  css={{
+                    width: 100,
+                    backgroundColor: `$${color}`,
+                    display: "grid",
+                    placeItems: "center",
+                  }}
+                >
+                  {color}
+                </ColourSquare>
+              ))}
+            </Stack>
+            <Stack css={{ gap: "0px", flexDirection: "column" }}>
+              {categorisedColors.oranges.map((color) => (
+                <ColourSquare
+                  key={color}
+                  css={{
+                    width: 100,
+                    backgroundColor: `$${color}`,
+                    display: "grid",
+                    placeItems: "center",
+                  }}
+                >
+                  {color}
+                </ColourSquare>
+              ))}
+            </Stack>
           </Stack>
         </section>
       </Container>

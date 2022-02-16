@@ -31,7 +31,7 @@ const Badge = styled("span", {
         color: "$orange11",
       },
       contrast: {
-        backgroundColor: "$hiContrast",
+        backgroundColor: "$gray9",
         color: "$loContrast",
       },
     },

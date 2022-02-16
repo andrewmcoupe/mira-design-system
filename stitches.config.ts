@@ -11,6 +11,7 @@ import {
   redDark,
   greenDark,
   pinkDark,
+  orangeDark,
 } from "@radix-ui/colors";
 
 export const globalStyles = globalCss({
@@ -142,6 +143,7 @@ export const darkTheme = createTheme({
     ...redDark,
     ...greenDark,
     ...pinkDark,
+    ...orangeDark,
     cardBg: "hsl(206,10%,15%)",
   },
 });
