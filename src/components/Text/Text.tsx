@@ -14,14 +14,12 @@ const Text = styled("span", {
 
   variants: {
     color: {
-      pink: {
-        color: "$pink10",
-      },
-      green: {
-        color: "$green10",
-      },
-      blue: {
-        color: "$blue10",
+      gradient: {
+        backgroundColor: "rgb(255,48,48)",
+        backgroundImage:
+          "linear-gradient(90deg, rgba(255,48,48,1) 4%, rgba(118,226,43,1) 48%, rgba(75,225,255,1) 100%)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
       },
       contrast: {
         color: "$hiContrast",
@@ -29,16 +27,16 @@ const Text = styled("span", {
     },
     size: {
       1: {
-        fontSize: "$1",
-      },
-      2: {
         fontSize: "$2",
       },
-      3: {
+      2: {
         fontSize: "$3",
       },
+      3: {
+        fontSize: "$4",
+      },
       4: {
-        fontSize: "$7",
+        fontSize: "$5",
       },
     },
   },

@@ -154,6 +154,9 @@ const TakeTwo = () => {
             <Text size={"4"}>
               The white husky howled as I typed on my keyboard.
             </Text>
+            <Text size={"4"} color={"gradient"}>
+              The white husky howled as I typed on my keyboard.
+            </Text>
           </Stack>
         </section>
       </Container>

@@ -53,7 +53,7 @@ const Button = styled("button", {
         color: "white",
       },
       ghost: {
-        backgroundColor: "transparent",
+        backgroundColor: "$gray4",
         color: "$hiContrast",
 
         "&:hover": {

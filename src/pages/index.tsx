@@ -32,6 +32,10 @@ const Header = styled("header", {
   justifyContent: "space-between",
 });
 
+const WipBadge = styled(Badge, {
+  position: "absolute",
+});
+
 const Index = () => {
   return (
     <div>
@@ -48,22 +52,12 @@ const Index = () => {
         }}
       >
         <Header>
-          <Text size={"2"} css={{ margin: 0 }}>
+          <Text size={"2"} css={{ margin: 0, position: "relative" }}>
             Mira Design System
+            <WipBadge color={"red"}>WIP v0.0.1</WipBadge>
           </Text>
           <ThemeChanger />
         </Header>
-        <section>
-          {/* BADGES */}
-          <Heading>Badges</Heading>
-          <Stack>
-            <Badge color={"red"}>Red</Badge>
-            <Badge color={"green"}>Green</Badge>
-            <Badge color={"blue"}>Blue</Badge>
-            <Badge color={"orange"}>Orange</Badge>
-          </Stack>
-        </section>
-
         <section>
           {/* BUTTONS */}
           <Heading>Buttons</Heading>
@@ -74,6 +68,17 @@ const Index = () => {
             <Button variant={"blue"}>Blue</Button>
             <Button variant={"orange"}>Orange</Button>
             <Button variant={"ghost"}>Ghost</Button>
+          </Stack>
+        </section>
+
+        <section>
+          {/* BADGES */}
+          <Heading>Badges</Heading>
+          <Stack>
+            <Badge color={"red"}>Red</Badge>
+            <Badge color={"green"}>Green</Badge>
+            <Badge color={"blue"}>Blue</Badge>
+            <Badge color={"orange"}>Orange</Badge>
           </Stack>
         </section>
 
@@ -175,6 +180,10 @@ const Index = () => {
 
             <Text size={"4"}>
               The white husky howled as I typed on my keyboard.
+            </Text>
+            <Text size={"4"} color={"gradient"}>
+              The white husky howled as I typed on my keyboard. The text moved
+              from red, to green, to blue in a matter of moments.
             </Text>
           </Stack>
         </section>

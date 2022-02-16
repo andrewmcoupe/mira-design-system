@@ -19,9 +19,9 @@ export default {
     },
     color: {
       control: "select",
-      options: ["red", "green", "blue", "contrast"],
+      options: ["red", "green", "blue", "contrast", "gradient"],
       defaultValue: "contrast",
-    }
+    },
   },
 } as ComponentMeta<typeof Text>;
 
@@ -44,4 +44,9 @@ Large.args = {
 export const ExtraLarge = Template.bind({});
 ExtraLarge.args = {
   size: "4",
+};
+
+export const Gradient = Template.bind({});
+ExtraLarge.args = {
+  color: "gradient",
 };
