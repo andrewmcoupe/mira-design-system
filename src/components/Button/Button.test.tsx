@@ -1,17 +1,17 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import Button from "./Button";
+import StyledButton from "./Button";
 
 describe("Pill", () => {
   it("should render the correct text", () => {
-    const { getByText } = render(<Button>Hello World</Button>);
+    const { getByText } = render(<StyledButton>Hello World</StyledButton>);
     expect(getByText("Hello World")).toBeInTheDocument();
   });
 
   it("should call the onClick handler", () => {
     const mockOnClickHandler = jest.fn();
     const { getByText } = render(
-      <Button onClick={mockOnClickHandler}>Hello World</Button>
+      <StyledButton onClick={mockOnClickHandler}>Hello World</StyledButton>
     );
 
     const button = getByText("Hello World");

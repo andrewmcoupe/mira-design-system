@@ -2,7 +2,7 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Card from "./Card";
 import Text from "../Text/Text";
-import Button from "../Button/Button";
+import StyledButton from "../Button/Button";
 
 export default {
   title: "Components/Card",
@@ -47,7 +47,7 @@ export const WithHeaderAndFooter = () => (
       </Text>
     </Card.Body>
     <Card.Footer>
-      <Button variant={"green"}>Learn more</Button>
+      <StyledButton variant={"green"}>Learn more</StyledButton>
     </Card.Footer>
   </Card>
 );
@@ -63,7 +63,7 @@ export const WithFooterOnly = () => (
       </Text>
     </Card.Body>
     <Card.Footer>
-      <Button variant={"green"}>Learn more</Button>
+      <StyledButton variant={"green"}>Learn more</StyledButton>
     </Card.Footer>
   </Card>
 );

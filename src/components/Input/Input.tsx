@@ -57,7 +57,6 @@ type StyledTextFieldProps = ComponentProps<typeof StyledTextField> & {
 
 export const Input = React.forwardRef<HTMLInputElement, StyledTextFieldProps>(
   (props, forwardedRef) => {
-    // @ts-ignore
     if (props.icon) {
       const IconElement = Icons[props.icon];
       return (
@@ -76,21 +75,6 @@ export const Input = React.forwardRef<HTMLInputElement, StyledTextFieldProps>(
     return <StyledTextField {...props} ref={forwardedRef} />;
   }
 );
-
-// export const IconInput = React.forwardRef<
-//   HTMLInputElement,
-//   StyledTextFieldProps & { icon: keyof typeof Icons }
-// >((props, forwardedRef) => {
-//   const IconElement = Icons[props.icon];
-//   return (
-//     <IconInputWrapper>
-//       <IconElement />
-//       <StyledTextField css={{ paddingLeft: "$5" }} />
-//     </IconInputWrapper>
-//   );
-// });
-//
-// IconInput.displayName = "IconInput";
 Input.displayName = "Input";
 
 export default Input;

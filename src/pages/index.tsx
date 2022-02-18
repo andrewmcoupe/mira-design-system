@@ -127,11 +127,11 @@ const Index = () => {
           <Heading>Icon buttons</Heading>
 
           <Stack>
-            <IconButton variant={"red"} icon={"HomeIcon"} />
-            <IconButton variant={"green"} icon={"CaretRightIcon"} />
-            <IconButton variant={"blue"} icon={"TwitterLogoIcon"} />
-            <IconButton variant={"orange"} icon={"GitHubLogoIcon"} />
-            <IconButton variant={"ghost"} icon={"BarChartIcon"} />
+            <Button variant={"red"} icon={"HomeIcon"} />
+            <Button variant={"green"} icon={"CaretRightIcon"} />
+            <Button variant={"blue"} icon={"TwitterLogoIcon"} />
+            <Button variant={"orange"} icon={"GitHubLogoIcon"} />
+            <Button variant={"ghost"} icon={"BarChartIcon"} />
           </Stack>
         </section>
 

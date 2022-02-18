@@ -1,8 +1,9 @@
 import { styled } from "../../../stitches.config";
 import * as Icons from "@radix-ui/react-icons";
-import { ComponentProps } from "@stitches/react";
+import { ComponentProps, CSS } from "@stitches/react";
+import React from "react";
 
-const Button = styled("button", {
+const StyledButton = styled("button", {
   borderRadius: "$3",
   padding: "0 $3",
   fontSize: "$4",
@@ -66,17 +67,33 @@ const Button = styled("button", {
   },
 });
 
-export const IconButton = ({
-  icon,
-  ...props
-}: { icon: keyof typeof Icons } & ComponentProps<typeof Button>) => {
-  const IconElement = Icons[icon];
-  return (
-    <Button variant={props.variant} css={{ width: 44, padding: "0 8px" }}>
-      <div>
-        <IconElement width={22} height={22} />
-      </div>
-    </Button>
-  );
-};
+type ButtonProps = {
+  icon?: keyof typeof Icons;
+} & ComponentProps<typeof StyledButton>;
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ icon, ...props }, forwardedRef) => {
+    if (icon) {
+      const IconElement = Icons[icon];
+      return (
+        <StyledButton
+          {...props}
+          variant={props.variant}
+          css={{ width: 44, padding: "0 8px" }}
+          ref={forwardedRef}
+        >
+          <div>
+            <IconElement width={22} height={22} />
+          </div>
+        </StyledButton>
+      );
+    }
+
+    // @ts-ignore
+    return <StyledButton {...props} ref={forwardedRef} />;
+  }
+);
+
+Button.displayName = "Button";
+
 export default Button;
