@@ -3,6 +3,7 @@ import { ChevronDownIcon } from "@radix-ui/react-icons";
 import { CSS } from "@stitches/react";
 import { styled } from "../../../stitches.config";
 
+/* The element displayed in the browser */
 const Presentational = styled("div", {
   display: "flex",
   justifyContent: "space-between",
@@ -15,6 +16,7 @@ const Presentational = styled("div", {
   width: "auto",
 });
 
+/* The native select element */
 const NativeSelect = styled("select", {
   position: "absolute",
   left: 0,
