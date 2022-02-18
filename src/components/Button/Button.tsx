@@ -68,22 +68,6 @@ const Button = React.forwardRef<
   HTMLButtonElement,
   ComponentProps<typeof StyledButton>
 >((props, forwardedRef) => {
-  // if (icon) {
-  //   const IconElement = Icons[icon];
-  //   return (
-  //     <StyledButton
-  //       {...props}
-  //       variant={props.variant}
-  //       css={{ width: 44, padding: "0 8px" }}
-  //       ref={forwardedRef}
-  //     >
-  //       <div>
-  //         <IconElement width={22} height={22} />
-  //       </div>
-  //     </StyledButton>
-  //   );
-  // }
-
   // @ts-ignore
   return <StyledButton {...props} ref={forwardedRef} />;
 });

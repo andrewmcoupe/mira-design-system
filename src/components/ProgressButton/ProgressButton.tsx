@@ -63,9 +63,14 @@ const ProgressButton = (props: ActionButtonProps) => {
       onMouseDown={handlePress}
       onTouchStart={handlePress}
       onTouchCancel={handlePressCancel}
+      onTouchEnd={handlePressCancel}
       css={{
         position: "relative",
         overflow: "hidden",
+        WebkitTapHighlightColor: "transparent",
+        "&:hover": {
+          opacity: 1,
+        },
       }}
     >
       <ButtonText>{props.children}</ButtonText>
