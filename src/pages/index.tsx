@@ -153,37 +153,47 @@ const Index = () => {
         </section>
 
         <section>
-          {/* SELECT */}
-          <Heading>Select</Heading>
-          <Stack>
-            <Select defaultValue={"Select..."}>
-              <option value="Select..." disabled={true}>
-                Select...
-              </option>
-              <option value="One husky on the wall">
-                One husky on the wall
-              </option>
-              <option value="Two">Two</option>
-              <option value="Three">Three</option>
-            </Select>
-            <Select defaultValue={"Select..."} disabled={true}>
-              <option value="Select..." disabled={true}>
-                Select...
-              </option>
-              <option value="One husky on the wall">
-                One husky on the wall
-              </option>
-              <option value="Two">Two</option>
-              <option value="Three">Three</option>
-            </Select>
-          </Stack>
-        </section>
-
-        <section>
           {/* LABEL */}
           <Heading>Labels</Heading>
           <Stack>
             <Label>Label</Label>
+          </Stack>
+        </section>
+
+        <section>
+          {/* SELECT */}
+          <Heading>Select</Heading>
+          <Stack>
+            <ColStack>
+              <Label htmlFor={"select1"}>Select</Label>
+              <Select id={"select1"} defaultValue={"Select an option..."}>
+                <option value="Select..." disabled={true}>
+                  Select an option...
+                </option>
+                <option value="One husky on the wall">
+                  One husky on the wall
+                </option>
+                <option value="Two">Two</option>
+                <option value="Three">Three</option>
+              </Select>
+            </ColStack>
+            <ColStack>
+              <Label htmlFor={"select2"}>Disabled select</Label>
+              <Select
+                id={"select2"}
+                defaultValue={"Disabled select..."}
+                disabled={true}
+              >
+                <option value="Select..." disabled={true}>
+                  Disabled select...
+                </option>
+                <option value="One husky on the wall">
+                  One husky on the wall
+                </option>
+                <option value="Two">Two</option>
+                <option value="Three">Three</option>
+              </Select>
+            </ColStack>
           </Stack>
         </section>
 

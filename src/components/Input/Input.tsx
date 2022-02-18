@@ -48,6 +48,7 @@ const IconInputWrapper = styled("div", {
     color: "$gray8",
     width: 22,
     height: 22,
+    pointerEvents: "none",
   },
 });
 
