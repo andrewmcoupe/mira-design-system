@@ -31,6 +31,13 @@ const NativeSelect = styled("select", {
   [`&:focus + ${Presentational}`]: {
     outline: "1px solid $gray11",
   },
+
+  [`&:disabled + ${Presentational}`]: {
+    opacity: 0.7,
+    cursor: "not-allowed",
+    pointerEvents: "none",
+    background: "$gray4",
+  },
 });
 
 const Wrapper = styled("div", {

@@ -7,6 +7,7 @@ import {
   Container,
   Heading,
   IconButton,
+  Input,
   Select,
   Text,
 } from "../components";
@@ -154,6 +155,37 @@ const Index = () => {
               <option value="Two">Two</option>
               <option value="Three">Three</option>
             </Select>
+            <Select defaultValue={"Select..."} disabled={true}>
+              <option value="Select..." disabled={true}>
+                Select...
+              </option>
+              <option value="One husky on the wall">
+                One husky on the wall
+              </option>
+              <option value="Two">Two</option>
+              <option value="Three">Three</option>
+            </Select>
+          </Stack>
+        </section>
+
+        <section>
+          {/* INPUT */}
+          <Heading>Input</Heading>
+          <Stack>
+            <Input />
+            <Input placeholder={"Disabled..."} disabled={true} />
+            <Input placeholder={"Invalid..."} state={"invalid"} />
+            <Input
+              placeholder={"Invalid with icon..."}
+              state={"invalid"}
+              icon={"TrashIcon"}
+            />
+            <Input placeholder={"With icon..."} icon={"HomeIcon"} />
+            <Input
+              placeholder={"Disabled with icon"}
+              icon={"HomeIcon"}
+              disabled={true}
+            />
           </Stack>
         </section>
 

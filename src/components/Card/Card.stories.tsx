@@ -14,7 +14,7 @@ export default {
   },
 } as ComponentMeta<typeof Card>;
 
-export const Default = () => (
+export const CardBody = () => (
   <Card>
     <Card.Body>
       <Text>
@@ -37,10 +37,24 @@ export const Default = () => (
 
 export const WithHeaderAndFooter = () => (
   <Card>
-    <Card.Header>
-      <Text>Card Header</Text>
-    </Card.Header>
-    <Card.Body css={{ my: "$2" }}>
+    <Card.Header>Card Header</Card.Header>
+    <Card.Body>
+      <Text>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu
+        malesuada nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Sed eu malesuada nunc. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Sed eu malesuada nunc.
+      </Text>
+    </Card.Body>
+    <Card.Footer>
+      <Button variant={"green"}>Learn more</Button>
+    </Card.Footer>
+  </Card>
+);
+
+export const WithFooterOnly = () => (
+  <Card>
+    <Card.Body>
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu
         malesuada nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit.

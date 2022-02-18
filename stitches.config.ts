@@ -1,4 +1,5 @@
 import { createStitches, createTheme, globalCss } from "@stitches/react";
+export type { VariantProps } from "@stitches/react";
 
 import {
   orange,
