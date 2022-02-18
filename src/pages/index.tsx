@@ -11,6 +11,7 @@ import {
   Text,
   Label,
   IconButton,
+  ProgressButton,
 } from "../components";
 import { styled } from "@stitches/react";
 import ThemeChanger from "../components/ThemeToggle/ThemeToggle";
@@ -137,6 +138,27 @@ const Index = () => {
             <IconButton variant={"blue"} icon={"DiscIcon"} />
             <IconButton variant={"orange"} icon={"CircleBackslashIcon"} />
             <IconButton variant={"ghost"} icon={"PaddingIcon"} />
+          </Stack>
+        </section>
+
+        <section>
+          {/* PROGRESS BUTTONS */}
+          <Heading>Progress buttons</Heading>
+          <Text>Click or press and hold to see them in action!</Text>
+
+          <Stack>
+            <ProgressButton progressColor={"blue"} variant={"red"}>
+              Hold onto me
+            </ProgressButton>
+            <ProgressButton progressColor={"red"} variant={"green"}>
+              Hold onto me
+            </ProgressButton>
+            <ProgressButton progressColor={"green"} variant={"blue"}>
+              Hold onto me
+            </ProgressButton>
+            <ProgressButton progressColor={"blue"} variant={"orange"}>
+              Hold onto me
+            </ProgressButton>
           </Stack>
         </section>
 
@@ -290,33 +312,33 @@ const Index = () => {
           {/* TEXT */}
           <Heading>Text</Heading>
 
-          <Stack css={{ flexDirection: "column" }}>
-            <Text css={{ margin: 0 }}>Size 1</Text>
+          <ColStack>
+            <Label>Size 1</Label>
             <Text size={"1"}>
               The white husky howled as I typed on my keyboard.
             </Text>
-            <Text css={{ margin: 0 }}>Size 2</Text>
+            <Label>Size 2</Label>
 
             <Text size={"2"}>
               The white husky howled as I typed on my keyboard.
             </Text>
-            <Text css={{ margin: 0 }}>Size 3</Text>
+            <Label>Size 3</Label>
 
             <Text size={"3"}>
               The white husky howled as I typed on my keyboard.
             </Text>
-            <Text css={{ margin: 0 }}>Size 4</Text>
+            <Label>Size 4</Label>
 
             <Text size={"4"}>
               The white husky howled as I typed on my keyboard.
             </Text>
-            <Text css={{ margin: 0 }}>Gradient</Text>
+            <Label>Gradient</Label>
 
             <Text size={"4"} color={"gradient"}>
               The white husky howled as I typed on my keyboard. The text moved
               from red, to green, to blue in a matter of moments.
             </Text>
-          </Stack>
+          </ColStack>
         </section>
 
         <section>

@@ -1,5 +1,6 @@
 export { default as Button } from "./Button/Button";
 export { default as IconButton } from "./IconButton/IconButton";
+export { default as ProgressButton } from "./ProgressButton/ProgressButton";
 export { default as Container } from "./Container/Container";
 export { default as Heading } from "./Heading/Heading";
 export { default as Text } from "./Text/Text";
