@@ -10,6 +10,7 @@ import {
   Input,
   Select,
   Text,
+  Label,
 } from "../components";
 import { styled } from "@stitches/react";
 import ThemeChanger from "../components/ThemeToggle/ThemeToggle";
@@ -67,6 +68,11 @@ const Stack = styled("div", {
   display: "flex",
   gap: "16px",
   flexWrap: "wrap",
+});
+
+const ColStack = styled(Stack, {
+  flexDirection: "column",
+  gap: "4px",
 });
 
 const Header = styled("header", {
@@ -186,6 +192,16 @@ const Index = () => {
               icon={"HomeIcon"}
               disabled={true}
             />
+          </Stack>
+          <Stack css={{ marginTop: "$4" }}>
+            <ColStack>
+              <Label htmlFor={"username"}>GitHub username</Label>
+              <Input id={"username"} />
+            </ColStack>
+            <ColStack>
+              <Label htmlFor={"label"}>Label</Label>
+              <Input id={"label"} icon={"AvatarIcon"} />
+            </ColStack>
           </Stack>
         </section>
 
