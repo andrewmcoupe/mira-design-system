@@ -148,16 +148,16 @@ const Index = () => {
 
           <Stack>
             <ProgressButton progressColor={"blue"} variant={"red"}>
-              Hold onto me
+              Hold on tight!
             </ProgressButton>
             <ProgressButton progressColor={"red"} variant={"green"}>
-              Hold onto me
+              Hold on tight!
             </ProgressButton>
             <ProgressButton progressColor={"green"} variant={"blue"}>
-              Hold onto me
+              Hold on tight!
             </ProgressButton>
             <ProgressButton progressColor={"blue"} variant={"orange"}>
-              Hold onto me
+              Hold on tight!
             </ProgressButton>
           </Stack>
         </section>
