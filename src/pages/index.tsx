@@ -175,8 +175,16 @@ const Index = () => {
         </section>
 
         <section>
+          {/* LABEL */}
+          <Heading>Labels</Heading>
+          <Stack>
+            <Label>Label</Label>
+          </Stack>
+        </section>
+
+        <section>
           {/* INPUT */}
-          <Heading>Input</Heading>
+          <Heading>Inputs</Heading>
           <Stack>
             <Input />
             <Input placeholder={"Disabled..."} disabled={true} />

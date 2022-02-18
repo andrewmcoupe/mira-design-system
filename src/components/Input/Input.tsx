@@ -7,9 +7,10 @@ export const StyledTextField = styled("input", {
   background: "$gray1",
   borderRadius: "$3",
   border: "1px solid $gray6",
-  padding: "$1",
+  padding: "$1 $2",
   outline: "none",
   color: "$hiContrast",
+  height: "30px",
 
   "&::placeholder": {
     color: "$gray10",
