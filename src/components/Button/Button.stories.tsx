@@ -60,5 +60,3 @@ export const Stretch = Template.bind({});
 Stretch.args = {
   stretch: true,
 };
-
-export const IconBtn = () => <Button icon={"HomeIcon"} />;

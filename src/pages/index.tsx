@@ -10,6 +10,7 @@ import {
   Select,
   Text,
   Label,
+  IconButton,
 } from "../components";
 import { styled } from "@stitches/react";
 import ThemeChanger from "../components/ThemeToggle/ThemeToggle";
@@ -126,11 +127,16 @@ const Index = () => {
           <Heading>Icon buttons</Heading>
 
           <Stack>
-            <Button variant={"red"} icon={"HomeIcon"} />
-            <Button variant={"green"} icon={"CaretRightIcon"} />
-            <Button variant={"blue"} icon={"TwitterLogoIcon"} />
-            <Button variant={"orange"} icon={"GitHubLogoIcon"} />
-            <Button variant={"ghost"} icon={"BarChartIcon"} />
+            <IconButton variant={"red"} icon={"HomeIcon"} />
+            <IconButton variant={"green"} icon={"CaretRightIcon"} />
+            <IconButton variant={"blue"} icon={"TwitterLogoIcon"} />
+            <IconButton variant={"orange"} icon={"GitHubLogoIcon"} />
+            <IconButton variant={"ghost"} icon={"BarChartIcon"} />
+            <IconButton variant={"red"} icon={"AvatarIcon"} />
+            <IconButton variant={"green"} icon={"CheckboxIcon"} />
+            <IconButton variant={"blue"} icon={"DiscIcon"} />
+            <IconButton variant={"orange"} icon={"CircleBackslashIcon"} />
+            <IconButton variant={"ghost"} icon={"PaddingIcon"} />
           </Stack>
         </section>
 

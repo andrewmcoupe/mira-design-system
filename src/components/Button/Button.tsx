@@ -1,6 +1,6 @@
 import { styled } from "../../../stitches.config";
 import * as Icons from "@radix-ui/react-icons";
-import { ComponentProps, CSS } from "@stitches/react";
+import { ComponentProps } from "@stitches/react";
 import React from "react";
 
 const StyledButton = styled("button", {
@@ -39,10 +39,6 @@ const StyledButton = styled("button", {
         backgroundColor: "$red10",
         color: "white",
       },
-      transparentRed: {
-        backgroundColor: "transparent",
-        color: "$red10",
-      },
       green: {
         backgroundColor: "$green10",
         color: "white",
@@ -63,36 +59,34 @@ const StyledButton = styled("button", {
           backgroundColor: "$gray4",
         },
       },
+      icon: { width: 44, padding: "0 8px" },
     },
   },
 });
 
-type ButtonProps = {
-  icon?: keyof typeof Icons;
-} & ComponentProps<typeof StyledButton>;
+const Button = React.forwardRef<
+  HTMLButtonElement,
+  ComponentProps<typeof StyledButton>
+>((props, forwardedRef) => {
+  // if (icon) {
+  //   const IconElement = Icons[icon];
+  //   return (
+  //     <StyledButton
+  //       {...props}
+  //       variant={props.variant}
+  //       css={{ width: 44, padding: "0 8px" }}
+  //       ref={forwardedRef}
+  //     >
+  //       <div>
+  //         <IconElement width={22} height={22} />
+  //       </div>
+  //     </StyledButton>
+  //   );
+  // }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ icon, ...props }, forwardedRef) => {
-    if (icon) {
-      const IconElement = Icons[icon];
-      return (
-        <StyledButton
-          {...props}
-          variant={props.variant}
-          css={{ width: 44, padding: "0 8px" }}
-          ref={forwardedRef}
-        >
-          <div>
-            <IconElement width={22} height={22} />
-          </div>
-        </StyledButton>
-      );
-    }
-
-    // @ts-ignore
-    return <StyledButton {...props} ref={forwardedRef} />;
-  }
-);
+  // @ts-ignore
+  return <StyledButton {...props} ref={forwardedRef} />;
+});
 
 Button.displayName = "Button";
 

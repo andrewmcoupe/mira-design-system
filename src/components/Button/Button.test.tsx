@@ -2,7 +2,7 @@ import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import StyledButton from "./Button";
 
-describe("Pill", () => {
+describe("Button", () => {
   it("should render the correct text", () => {
     const { getByText } = render(<StyledButton>Hello World</StyledButton>);
     expect(getByText("Hello World")).toBeInTheDocument();
