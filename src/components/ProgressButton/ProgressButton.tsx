@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 import { styled, theme } from "../../../stitches.config";
 import Button from "../Button/Button";
 import React from "react";
@@ -43,10 +43,23 @@ const ButtonText = styled("span", {
 
 export type ActionButtonProps = {
   progressColor: "red" | "green" | "blue" | "orange";
+  onProgressComplete?: () => void;
 } & ComponentProps<typeof Button>;
 
 const ProgressButton = (props: ActionButtonProps) => {
+  const x = useMotionValue(0);
   const [isPressing, setIsPressing] = React.useState(false);
+
+  React.useEffect(
+    () =>
+      x.onChange((latest) => {
+        // @ts-ignore
+        if (latest === "0%") {
+          props.onProgressComplete?.();
+        }
+      }),
+    [props, x]
+  );
 
   const handlePress = () => {
     setIsPressing(true);
@@ -58,7 +71,7 @@ const ProgressButton = (props: ActionButtonProps) => {
 
   return (
     <Button
-      {...props}
+      variant={props.variant}
       onMouseUp={handlePressCancel}
       onMouseDown={handlePress}
       onTouchStart={handlePress}
@@ -75,6 +88,7 @@ const ProgressButton = (props: ActionButtonProps) => {
     >
       <ButtonText>{props.children}</ButtonText>
       <Progress
+        style={{ x }}
         variant={props.progressColor}
         initial={{ x: "-101%" }}
         transition={{

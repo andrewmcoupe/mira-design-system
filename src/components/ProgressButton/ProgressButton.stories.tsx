@@ -31,3 +31,13 @@ export const Template: ComponentStory<typeof ProgressButton> = (
   args: ActionButtonProps
   // @ts-ignore
 ) => <ProgressButton {...args} />;
+
+export const WithOnCompleteCallback = () => (
+  <ProgressButton
+    progressColor={"red"}
+    variant={"green"}
+    onProgressComplete={() => alert("Do something cool")}
+  >
+    Click me
+  </ProgressButton>
+);
