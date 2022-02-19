@@ -159,6 +159,13 @@ const Index = () => {
             <ProgressButton progressColor={"blue"} variant={"orange"}>
               Hold on tight!
             </ProgressButton>
+            <ProgressButton
+              progressColor={"red"}
+              variant={"blue"}
+              onProgressComplete={() => alert("Do something")}
+            >
+              With onComplete callback
+            </ProgressButton>
           </Stack>
         </section>
 
