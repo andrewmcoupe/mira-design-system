@@ -11,6 +11,8 @@ export const StyledIconButton = styled(Button, {
 
 export type IconButtonProps = {
   icon?: keyof typeof Icons;
+  ariaLabel?: string;
+  title?: string;
 } & ComponentProps<typeof StyledIconButton>;
 
 const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(

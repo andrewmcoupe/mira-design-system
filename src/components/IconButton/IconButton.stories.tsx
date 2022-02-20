@@ -19,6 +19,18 @@ export default {
         options: Object.keys(Icons),
       },
     },
+    ariaLabel: {
+      defaultValue: "Mira icon",
+      control: {
+        type: "text",
+      },
+    },
+    title: {
+      defaultValue: "Mira icon",
+      control: {
+        type: "text",
+      },
+    },
   },
 } as ComponentMeta<typeof IconButton>;
 
