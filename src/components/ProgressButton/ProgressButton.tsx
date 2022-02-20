@@ -47,6 +47,7 @@ export type ActionButtonProps = {
 } & ComponentProps<typeof Button>;
 
 const ProgressButton = (props: ActionButtonProps) => {
+  const { progressColor, onProgressComplete, ...buttonProps } = props;
   const x = useMotionValue(0);
   const [isPressing, setIsPressing] = React.useState(false);
 
@@ -55,7 +56,7 @@ const ProgressButton = (props: ActionButtonProps) => {
       x.onChange((latest) => {
         // @ts-ignore
         if (latest === "0%") {
-          props.onProgressComplete?.();
+          onProgressComplete?.();
         }
       }),
     [props, x]
@@ -71,7 +72,7 @@ const ProgressButton = (props: ActionButtonProps) => {
 
   return (
     <Button
-      variant={props.variant}
+      {...buttonProps}
       onMouseUp={handlePressCancel}
       onMouseDown={handlePress}
       onTouchStart={handlePress}
@@ -89,7 +90,7 @@ const ProgressButton = (props: ActionButtonProps) => {
       <ButtonText>{props.children}</ButtonText>
       <Progress
         style={{ x }}
-        variant={props.progressColor}
+        variant={progressColor}
         initial={{ x: "-101%" }}
         transition={{
           ease: "linear",
