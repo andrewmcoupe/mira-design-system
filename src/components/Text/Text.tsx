@@ -1,6 +1,6 @@
 import { styled } from "../../../stitches.config";
 
-const Text = styled("span", {
+const Text = styled("p", {
   lineHeight: "1.5",
   margin: "0",
   fontWeight: 400,
