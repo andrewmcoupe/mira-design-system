@@ -2,7 +2,7 @@ import { styled } from "../../../stitches.config";
 
 const Text = styled("p", {
   lineHeight: "1.5",
-  margin: "0",
+  margin: "40px",
   fontWeight: 400,
   display: "block",
   marginBottom: "$2",

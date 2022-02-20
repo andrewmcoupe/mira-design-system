@@ -1,20 +1,20 @@
-#name: 'Chromatic/Storybook Deployment'
-#
-#on: push
-#
-#jobs:
-#  deploy:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v1
-#
-#      - name: Install dependencies
-#        run: yarn
-#
-#      - name: Publish to Chromatic
-#        uses: chromaui/action@v1
-#        # Chromatic GitHub Action options
-#        with:
-#          token: ${{ secrets.GITHUB_TOKEN }}
-#          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
-#          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+name: 'Chromatic/Storybook'
+
+on: push
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        # Chromatic GitHub Action options
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
