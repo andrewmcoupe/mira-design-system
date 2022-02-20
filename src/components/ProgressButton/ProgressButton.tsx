@@ -59,7 +59,7 @@ const ProgressButton = (props: ActionButtonProps) => {
           onProgressComplete?.();
         }
       }),
-    [props, x]
+    [onProgressComplete, props, x]
   );
 
   const handlePress = () => {
