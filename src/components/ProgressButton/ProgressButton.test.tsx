@@ -3,7 +3,6 @@ import { render, fireEvent, act, waitFor } from "@testing-library/react";
 import ProgressButton from "./ProgressButton";
 
 beforeEach(() => {
-  // Reset timers after each test as we manually advance the timer
   jest.useFakeTimers();
 });
 
