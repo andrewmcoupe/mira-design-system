@@ -2,14 +2,13 @@ import React from "react";
 import { render, fireEvent, act, waitFor } from "@testing-library/react";
 import ProgressButton from "./ProgressButton";
 
-afterEach(() => {
+beforeEach(() => {
   // Reset timers after each test as we manually advance the timer
-  jest.useRealTimers();
+  jest.useFakeTimers();
 });
 
 describe("ProgressButton", () => {
   it("should animate the child div into the correct position on mouse down", () => {
-    jest.useFakeTimers();
     const { getByTestId, getByRole } = render(
       <ProgressButton progressColor={"red"} variant={"blue"} />
     );
@@ -28,7 +27,6 @@ describe("ProgressButton", () => {
   });
 
   it("should animate back to its initial position on mouse up", () => {
-    jest.useFakeTimers();
     const { getByTestId, getByRole } = render(
       <ProgressButton progressColor={"red"} variant={"blue"} />
     );
@@ -59,7 +57,6 @@ describe("ProgressButton", () => {
   });
 
   it("should invoke onProgressComplete when animation has completed", () => {
-    jest.useFakeTimers();
     const mockOnProgressComplete = jest.fn();
     const { getByRole } = render(
       <ProgressButton
