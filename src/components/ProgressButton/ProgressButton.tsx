@@ -89,6 +89,7 @@ const ProgressButton = (props: ActionButtonProps) => {
     >
       <ButtonText>{props.children}</ButtonText>
       <Progress
+        data-testid={"animated-div"}
         style={{ x }}
         variant={progressColor}
         initial={{ x: "-101%" }}
