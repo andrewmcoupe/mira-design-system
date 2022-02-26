@@ -7,7 +7,7 @@ beforeEach(() => {
 });
 
 describe("ProgressButton", () => {
-  it("should animate the child div into the correct position on mouse down", () => {
+  it("should animate the animated-div into the correct position on mouse down", () => {
     const { getByTestId, getByRole } = render(
       <ProgressButton progressColor={"red"} variant={"blue"} />
     );

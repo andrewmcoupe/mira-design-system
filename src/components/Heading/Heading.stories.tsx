@@ -12,13 +12,20 @@ export default {
       name: "Heading text",
       defaultValue: "The white husky howls at night",
     },
-    as: {
+    size: {
       control: {
         type: "inline-radio",
-        options: ["h1", "h2", "h3", "h4", "h5", "h6"],
+        options: ["1", "2", "3", "4", "5", "6"],
       },
       name: "Heading element",
-      defaultValue: "h1",
+      defaultValue: "1",
+    },
+    gradient: {
+      control: {
+        type: "boolean",
+      },
+      name: "Gradient",
+      defaultValue: "false",
     },
   },
 } as ComponentMeta<typeof Heading>;

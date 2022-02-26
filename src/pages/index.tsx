@@ -316,6 +316,48 @@ const Index = () => {
         </section>
 
         <section>
+          {/* HEADINGS */}
+          <Heading>Headings</Heading>
+
+          <ColStack>
+            <Label>h1</Label>
+            <Heading size={"1"}>
+              The white husky howled as I typed on my keyboard.
+            </Heading>
+
+            <Label>h2</Label>
+            <Heading as={"h2"} size={"2"}>
+              The white husky howled as I typed on my keyboard.
+            </Heading>
+
+            <Label>h2 with gradient</Label>
+            <Heading as={"h2"} size={"2"} gradient={true}>
+              The white husky howled as I typed on my keyboard.
+            </Heading>
+
+            <Label>h3</Label>
+            <Heading as={"h3"} size={"3"}>
+              The white husky howled as I typed on my keyboard.
+            </Heading>
+
+            <Label>h4</Label>
+            <Heading as={"h4"} size={"4"}>
+              The white husky howled as I typed on my keyboard.
+            </Heading>
+
+            <Label>h5</Label>
+            <Heading as={"h5"} size={"5"}>
+              The white husky howled as I typed on my keyboard.
+            </Heading>
+
+            <Label>h6</Label>
+            <Heading as={"h6"} size={"6"}>
+              The white husky howled as I typed on my keyboard.
+            </Heading>
+          </ColStack>
+        </section>
+
+        <section>
           {/* TEXT */}
           <Heading>Text</Heading>
 
