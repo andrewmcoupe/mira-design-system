@@ -115,6 +115,11 @@ export const { styled, getCssText, theme, css } = createStitches({
       6: "48px",
       7: "56px",
     },
+    zIndices: {
+      beneath: -1,
+      normal: "auto",
+      onTop: 10,
+    },
     fontWeights: {
       1: "300",
       2: "400",
@@ -125,11 +130,17 @@ export const { styled, getCssText, theme, css } = createStitches({
       7: "900",
       bold: "bold",
     },
+    borderWidths: {
+      1: "1px",
+      2: "2px",
+      3: "5px",
+      4: "10px",
+      5: "25px",
+    },
     radii: {
       1: "4px",
       2: "6px",
       3: "8px",
-      circle: "50%",
       pill: "9999px",
     },
   },

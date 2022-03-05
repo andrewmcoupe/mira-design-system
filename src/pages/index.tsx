@@ -89,6 +89,7 @@ const WipBadge = styled(Badge, {
 });
 
 const Index = () => {
+  // @ts-ignore
   return (
     <div>
       <Head>
@@ -388,6 +389,176 @@ const Index = () => {
               from red, to green, to blue in a matter of moments.
             </Text>
           </ColStack>
+        </section>
+
+        <section>
+          {/* RADII */}
+          <Heading>Radii</Heading>
+          <Stack
+            css={{
+              backgroundColor: "$gray4",
+              padding: "$3",
+              height: "$3",
+              borderRadius: "$1",
+              marginBottom: "$3",
+            }}
+          >
+            1
+          </Stack>
+          <Stack
+            css={{
+              backgroundColor: "$gray4",
+              padding: "$3",
+              height: "$3",
+              borderRadius: "$2",
+              marginBottom: "$3",
+            }}
+          >
+            2
+          </Stack>
+          <Stack
+            css={{
+              backgroundColor: "$gray4",
+              padding: "$3",
+              height: "$3",
+              borderRadius: "$3",
+              marginBottom: "$3",
+            }}
+          >
+            3
+          </Stack>
+          <Stack
+            css={{
+              backgroundColor: "$gray4",
+              padding: "$3",
+              height: "$3",
+              borderRadius: "$pill",
+            }}
+          >
+            Pill
+          </Stack>
+        </section>
+
+        <section>
+          {/* Space */}
+          <Heading>Space</Heading>
+          <Stack>
+            <Stack
+              css={{
+                backgroundColor: "$gray4",
+                width: theme.space["1"].value,
+                height: 50,
+                borderRadius: "$1",
+                marginBottom: "$3",
+              }}
+            />
+            <Stack
+              css={{
+                backgroundColor: "$gray4",
+                width: theme.space["2"].value,
+                height: 50,
+                borderRadius: "$1",
+                marginBottom: "$3",
+              }}
+            />
+            <Stack
+              css={{
+                backgroundColor: "$gray4",
+                width: theme.space["3"].value,
+                height: 50,
+                borderRadius: "$1",
+                marginBottom: "$3",
+              }}
+            />
+            <Stack
+              css={{
+                backgroundColor: "$gray4",
+                width: theme.space["4"].value,
+                height: 50,
+                borderRadius: "$1",
+                marginBottom: "$3",
+              }}
+            />
+            <Stack
+              css={{
+                backgroundColor: "$gray4",
+                width: theme.space["5"].value,
+                height: 50,
+                borderRadius: "$1",
+                marginBottom: "$3",
+              }}
+            />
+            <Stack
+              css={{
+                backgroundColor: "$gray4",
+                width: theme.space["6"].value,
+                height: 50,
+                borderRadius: "$1",
+                marginBottom: "$3",
+              }}
+            />
+            <Stack
+              css={{
+                backgroundColor: "$gray4",
+                width: theme.space["7"].value,
+                height: 50,
+                borderRadius: "$1",
+                marginBottom: "$3",
+              }}
+            />
+          </Stack>
+        </section>
+
+        <section>
+          {/* Z indices */}
+          <Heading>Z indices</Heading>
+          <Stack>
+            <Stack
+              //@ts-ignore
+
+              css={{
+                position: "relative",
+                zIndex: "$beneath",
+                backgroundColor: "$gray4",
+                padding: "$3",
+                border: "1px solid $hiContrast",
+                alignSelf: "start",
+              }}
+            >
+              Below
+            </Stack>
+            <Stack
+              //@ts-ignore
+              css={{
+                position: "relative",
+                zIndex: "$auto",
+                backgroundColor: "$gray5",
+                padding: "$3",
+                marginLeft: -24,
+                marginTop: 24,
+                border: "1px solid $hiContrast",
+                alignSelf: "start",
+              }}
+            >
+              Auto
+            </Stack>
+            <Stack
+              //@ts-ignore
+
+              css={{
+                position: "relative",
+                zIndex: "$onTop",
+                backgroundColor: "$gray6",
+                padding: "$3",
+                border: "1px solid $hiContrast",
+                marginLeft: -32,
+                marginTop: 48,
+                alignSelf: "start",
+              }}
+            >
+              On top
+            </Stack>
+          </Stack>
         </section>
 
         <section>
