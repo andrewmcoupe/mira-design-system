@@ -12,6 +12,7 @@ import {
   Label,
   IconButton,
   ProgressButton,
+  List,
 } from "../components";
 import { styled } from "@stitches/react";
 import ThemeChanger from "../components/ThemeToggle/ThemeToggle";
@@ -388,6 +389,25 @@ const Index = () => {
               The white husky howled as I typed on my keyboard. The text moved
               from red, to green, to blue in a matter of moments.
             </Text>
+          </ColStack>
+        </section>
+
+        <section>
+          {/* LIST */}
+          <Heading>List</Heading>
+
+          <ColStack>
+            <List>
+              <li>The white husky howled as I typed on my keyboard.</li>
+              <li>The white husky howled as I typed on my keyboard.</li>
+              <li>The white husky howled as I typed on my keyboard.</li>
+            </List>
+
+            <List variant={"ol"}>
+              <li>The white husky howled as I typed on my keyboard.</li>
+              <li>The white husky howled as I typed on my keyboard.</li>
+              <li>The white husky howled as I typed on my keyboard.</li>
+            </List>
           </ColStack>
         </section>
 
