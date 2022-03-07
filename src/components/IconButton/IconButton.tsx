@@ -6,7 +6,7 @@ import { ComponentProps } from "@stitches/react";
 
 export const StyledIconButton = styled(Button, {
   width: 44,
-  padding: "0 8px",
+  padding: "0 $1",
 });
 
 export type IconButtonProps = {
